@@ -10,64 +10,94 @@
 </head>
 <body class="min-h-screen bg-black text-gray-100">
   <header>
+<header>
     <nav class="flex items-center justify-between p-5 bg-teal-700 text-white">
-      <h1 href="" class="text-3xl font-bold pl-32">🚀 Acme Rockets</h1>
-      <div>
-        <button class="md:hidden p-2 text-white bg-teal-600 rounded hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-4 md:mt-0">
-        <li><a href="#" class="hover:underline">Home</a></li>
-        <li><a href="#" class="hover:underline">About</a></li>
-        <li><a href="#" class="hover:underline">Services</a></li>
-        <li><a href="#" class="hover:underline">Contact</a></li>
-      </ul>
-        </button> 
-      </div>
-      <ul id="menu" class="hidden md:flex flex-col md:flex-row items-start justify-items-end md:space-x-4 space-y-0 md:space-y-0 mt-4 md:mt-0 text-center text-2xl pr-16">
-        <li><a href="" class="">Our Rockets</a></li>
-        <li><a href="#" class="">Testimonials</a></li>
-        <li><a href="#" class="">Contact Us</a></li>
-      </ul>
+        <h1 href="" class="text-3xl font-bold pl-32">🚀 Acme Rockets</h1>
+        
+        <!-- Mobile Button and Menu -->
+        <div class="md:hidden">
+            <!-- The button -->
+            <button id="menu-toggle" class="p-2 text-white bg-teal-600 rounded hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- The menu (mobile dropdown) -->
+            <ul id="menu" class="hidden flex-col space-y-2 mt-4 text-center text-2xl">
+                <li><a href="#" class="hover:underline">Our Rockets</a></li>
+                <li><a href="#" class="hover:underline">Testimonials</a></li>
+                <li><a href="#" class="hover:underline">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex flex-row items-center space-x-4 text-2xl pr-16">
+            <li><a href="#" class="hover:underline">Our Rockets</a></li>
+            <li><a href="#" class="hover:underline">Testimonials</a></li>
+            <li><a href="#" class="hover:underline">Contact Us</a></li>
+        </ul>
     </nav>
-  </header>
-  <main class="container mx-auto p-8">
+</header>
 
-    <section class="text-center">
-      <img class="1/2" src="pic/rocketman.png" alt="Acme Rockets Logo" class="my-2 mx-0 mb-0">
-      <h2 class="text-4xl font-bold mb-4">We Boldly Go <span class="text-slate-400">Where No Rocket</span> Has Gone Before...</h2>
-      <h2 class="font-bold text-lg mb-8 text-slate-400">We're building rockets for the next century today. From the moon to Mars, Jupiter and beyond...</h2>
-      <h2 class="align-text-bottom text-slate-400">Think Acme Rockets</h2>
-    </section> 
+  
+<main class="container mx-auto p-8"> 
 
-     <hr class="my-8 border-gray-600" />
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<section class="flex flex-col md:flex-row items-center md:items-start text-center md:text-end gap-6"> 
 
+  
+  <!-- Image -->
+  <img src="pic/rocketman.png" alt="Acme Rockets Logo" class="my-2 mx-auto md:mx-0 mb-0 w-1/2 md:w-1/3">
+  <!-- Text -->
+  <div class="flex-1">
+    <h2 class="text-4xl font-bold mb-4">We Boldly Go <span class="text-slate-400">Where No Rocket</span> Has Gone Before...</h2>
+    <h2 class="font-bold text-lg mb-8 text-slate-400">We're building rockets for the next century today. From the moon to Mars, Jupiter and beyond...</h2>
+    <h2 class="align-text-bottom text-slate-400">Think Acme Rockets</h2>
+  </div>
+
+</section>
+
+    <hr class="my-8 border-gray-600" />
+
+    <!-- Heading OUTSIDE grid -->
     <section>
-     <h1 class="text-center text-3xl font-bold mb-4">Our Rockets</h1>
-     <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
-        <img src="pic/rocketridding.png" alt="Rocket 1" class="w-full h-32 w-25 object-none rounded mb-4">
-        <h1 class="text-xl font-semibold mb-2">Explorer</h1>
-        <h3 class="text-gray-400 mb-4">Affordable Exploration</h3>
-    </section>
-          <hr class="my-8 border-white" />
-    <section>
-      <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
-          <img src="pic/rocketadven.png" alt="Rocket 2" class="w-full h-32 w-25 object-none rounded mb-4">
-          <h1 class="text-xl font-semibold mb-2">Adventurer</h1>
-          <h3 class="text-gray-400 mb-4">Best Selling Rocket!</h3> 
+      <h1 class="text-center text-3xl font-bold mb-8">Our Rockets</h1>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <section>
+          <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
+              <img src="pic/rocketridding.png" alt="Rocket 1" class="w-full h-32 w-25 object-none rounded mb-4">
+              <h1 class="text-xl font-semibold mb-2">Explorer</h1>
+              <h3 class="text-gray-400 mb-4">Affordable Exploration</h3>
+          </div>
+        </section>
+
+        <!-- Card 2 -->
+        <section>
+          <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
+              <img src="pic/rocketadven.png" alt="Rocket 2" class="w-full h-32 w-25 object-none rounded mb-4">
+              <h1 class="text-xl font-semibold mb-2">Adventurer</h1>
+              <h3 class="text-gray-400 mb-4">Best Selling Rocket!</h3> 
+          </div>
+        </section>
+
+        <!-- Card 3 -->
+        <section>
+          <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
+              <img src="pic/rocketinfi.png" alt="Rocket 3" class="w-full h-32 w-25 object-none rounded mb-4">
+              <h1 class="text-xl font-semibold mb-2">Infinity</h1>
+              <h3 class="text-gray-400 mb-4">Luxury Starship</h3>
+          </div>  
+        </section>
+
       </div>
     </section>
-          <hr class="my-8 border-white" />
-    <section>
-      <div class="bg-black p-6 border border-white rounded-lg shadow-lg text-center">
-          <img src="pic/rocketinfi.png" alt="Rocket 3" class="w-full h-32 w-25 object-none rounded mb-4">
-          <h1 class="text-xl font-semibold mb-2">Infinity</h1>
-          <h3 class="text-gray-400 mb-4">Luxury Starship</h3>
-      </div>  
-    </section>
-    </section>
+
+</main>
+
     <hr class="my-8 border-white" />
     
     <section> 
@@ -153,6 +183,6 @@
 
   </div>
 </footer>
-
+<script src="nav-toogle-button.js"></script>
 </body>
 </html>
